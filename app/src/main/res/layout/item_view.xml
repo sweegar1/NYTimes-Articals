@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/card"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="@dimen/dimen_10_dp">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:id="@+id/imageViewAvatar"
+            android:layout_width="@dimen/dimen_40_dp"
+            android:layout_height="@dimen/dimen_40_dp"
+            android:background="@drawable/circular_background"
+            android:layout_marginLeft="@dimen/dimen_20_dp"
+            android:scaleType="fitXY"
+            android:layout_alignParentLeft="true"
+android:layout_centerVertical="true"
+            tools:ignore="contentDescription" />
+
+        <RelativeLayout
+            android:id="@+id/detail"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_toRightOf="@+id/imageViewAvatar"
+            android:layout_toLeftOf="@+id/img_right"
+            android:paddingLeft="@dimen/dimen_20_dp"
+            android:paddingRight="@dimen/dimen_20_dp">
+
+            <TextView
+                android:id="@+id/title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:paddingTop="@dimen/dimen_20_dp"
+                android:paddingBottom="@dimen/dimen_5_dp"
+                android:textColor="@color/black"
+                android:textSize="@dimen/dimen_18_sp"
+                tools:viewBindingType="TextView" />
+
+            <TextView
+                android:id="@+id/content"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/title"
+                android:layout_alignParentBottom="true"
+                android:paddingBottom="@dimen/dimen_20_dp"
+                android:text="description"
+                android:textSize="@dimen/dimen_12_sp"
+                tools:viewBindingType="TextView" />
+
+
+        </RelativeLayout>
+        <ImageView
+            android:id="@+id/img_right"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:src="@drawable/ic_right"
+            android:layout_alignParentRight="true"
+            />
+    </RelativeLayout>
+
+</androidx.cardview.widget.CardView>
